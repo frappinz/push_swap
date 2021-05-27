@@ -6,7 +6,7 @@
 /*   By: fminardi <fminardi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 16:07:27 by fminardi          #+#    #+#             */
-/*   Updated: 2021/05/26 17:00:37 by fminardi         ###   ########.fr       */
+/*   Updated: 2021/05/27 13:46:35 by fminardi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,7 +115,6 @@ void	choose_algorithm(t_stack *stack)
 int	main(int argc, char **argv)
 {
 	t_stack	stack;
-	int		i;
 
 	only_integers(argc, argv);
 	if (argc > 1)
@@ -130,7 +129,6 @@ int	main(int argc, char **argv)
 	parsing_arguments(argc, argv, &stack);
 	double_checker(&stack);
 	choose_algorithm(&stack);
-	i = 0;
 	free(stack.a);
 	free(stack.b);
 	return (0);

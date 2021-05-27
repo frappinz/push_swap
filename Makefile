@@ -2,7 +2,7 @@ NAME_PUSH	= push_swap
 NAME_CHECKER = checker
 
 CC 		= gcc
-CFLAGS	= -Wall -Wextra -Werror -fsanitize=address
+CFLAGS	= -Wall -Wextra -Werror
 
 PUSH_SRCS =	push_swap.c			\
 			parsing_checking.c	\

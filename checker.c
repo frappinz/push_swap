@@ -6,7 +6,7 @@
 /*   By: fminardi <fminardi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 15:58:36 by fminardi          #+#    #+#             */
-/*   Updated: 2021/05/27 11:51:10 by fminardi         ###   ########.fr       */
+/*   Updated: 2021/05/27 12:37:52 by fminardi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	get_next_line(char **line)
 		if (buffer[i] == '\n' || buffer[i] == 0)
 		{
 			buffer[i] = 0;
-			*line = malloc(i + 1);
+			*line = malloc(i);
 			if (!(*line))
 				return (-1);
 			ft_while(line, buffer, i);
@@ -98,6 +98,8 @@ void	take_commands(t_stack *stack, char *line)
 		free(line);
 		line = NULL;
 	}
+	free(line);
+	line = NULL;
 }
 
 int	main(int argc, char **argv)
